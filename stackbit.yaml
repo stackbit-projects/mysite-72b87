@@ -1,0 +1,1047 @@
+stackbitVersion: ~0.3.0
+ssgName: hugo
+publishDir: public
+dataDir: data
+pagesDir: content
+assets:
+  referenceType: static
+  staticDir: static
+  uploadDir: assets
+  publicPath: /
+models:
+  button:
+    type: data
+    label: Button
+    file: button.toml
+    fields:
+      - type: string
+        name: dark_primary_color
+        label: Dark Primary Color
+      - type: string
+        name: light_primary_color
+        label: Light Primary Color
+      - type: string
+        name: hacker_primary_color
+        label: Hacker Primary Color
+      - type: string
+        name: solarized_primary_color
+        label: Solarized Primary Color
+      - type: string
+        name: kimbie_primary_color
+        label: Kimbie Primary Color
+  flowchartjs:
+    type: data
+    label: Flowchartjs
+    file: flowchartjs.json
+    fields:
+      - type: number
+        name: x
+        label: X
+        subtype: int
+      - type: number
+        name: 'y'
+        label: 'Y'
+        subtype: int
+      - type: number
+        name: line-width
+        label: Line Width
+        subtype: int
+      - type: number
+        name: line-length
+        label: Line Length
+        subtype: int
+      - type: number
+        name: text-margin
+        label: Text Margin
+        subtype: int
+      - type: number
+        name: font-size
+        label: Font Size
+        subtype: int
+      - type: string
+        name: font-color
+        label: Font Color
+      - type: string
+        name: line-color
+        label: Line Color
+      - type: string
+        name: element-color
+        label: Element Color
+      - type: string
+        name: fill
+        label: Fill
+      - type: string
+        name: yes-text
+        label: Yes Text
+      - type: string
+        name: no-text
+        label: No Text
+      - type: string
+        name: arrow-end
+        label: Arrow End
+      - type: number
+        name: scale
+        label: Scale
+        subtype: int
+      - type: object
+        name: symbols
+        label: Symbols
+        fields:
+          - type: object
+            name: start
+            label: Start
+            fields:
+              - type: string
+                name: font-color
+                label: Font Color
+              - type: string
+                name: element-color
+                label: Element Color
+              - type: string
+                name: fill
+                label: Fill
+          - type: object
+            name: end
+            label: End
+            fields:
+              - type: string
+                name: class
+                label: Class
+      - type: object
+        name: flowstate
+        label: Flowstate
+        fields:
+          - type: object
+            name: past
+            label: Past
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+              - type: number
+                name: font-size
+                label: Font Size
+                subtype: int
+          - type: object
+            name: current
+            label: Current
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+              - type: string
+                name: font-color
+                label: Font Color
+              - type: string
+                name: font-weight
+                label: Font Weight
+          - type: object
+            name: future
+            label: Future
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+          - type: object
+            name: request
+            label: Request
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+          - type: object
+            name: invalid
+            label: Invalid
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+          - type: object
+            name: approved
+            label: Approved
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+              - type: number
+                name: font-size
+                label: Font Size
+                subtype: int
+              - type: string
+                name: yes-text
+                label: Yes Text
+              - type: string
+                name: no-text
+                label: No Text
+          - type: object
+            name: rejected
+            label: Rejected
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+              - type: number
+                name: font-size
+                label: Font Size
+                subtype: int
+              - type: string
+                name: yes-text
+                label: Yes Text
+              - type: string
+                name: no-text
+                label: No Text
+  font:
+    type: data
+    label: Font
+    file: font.toml
+    fields:
+      - type: string
+        name: title_font
+        label: Title Font
+      - type: string
+        name: content_font
+        label: Content Font
+      - type: string
+        name: cursive_font
+        label: Cursive Font
+  grid:
+    type: data
+    label: Grid
+    file: grid.toml
+    fields:
+      - type: string
+        name: grid_max_width
+        label: Grid Max Width
+      - type: string
+        name: grid_max_unit
+        label: Grid Max Unit
+      - type: string
+        name: grid_main_main_width
+        label: Grid Main Main Width
+      - type: string
+        name: grid_main_main_unit
+        label: Grid Main Main Unit
+      - type: string
+        name: grid_main_side_width
+        label: Grid Main Side Width
+      - type: string
+        name: grid_main_side_unit
+        label: Grid Main Side Unit
+      - type: string
+        name: grid_column_gap_width
+        label: Grid Column Gap Width
+      - type: string
+        name: grid_column_gap_unit
+        label: Grid Column Gap Unit
+      - type: string
+        name: grid_navbar_height
+        label: Grid Navbar Height
+      - type: string
+        name: grid_row_gap
+        label: Grid Row Gap
+  lib:
+    type: data
+    label: Lib
+    file: lib.toml
+    fields:
+      - type: object
+        name: js
+        label: Js
+        fields:
+          - type: object
+            name: mermaid
+            label: Mermaid
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: katex
+            label: Katex
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: katex_auto_render
+            label: Katex Auto Render
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: flowchartjs
+            label: Flowchartjs
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: raphael
+            label: Raphael
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: mathjax
+            label: Mathjax
+            fields:
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: webfont
+            label: Webfont
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: snap_svg
+            label: Snap Svg
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: lodash
+            label: Lodash
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: sequence_diagram
+            label: Sequence Diagram
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: chart
+            label: Chart
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: wavedrom
+            label: Wavedrom
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: wavedrom_skin
+            label: Wavedrom Skin
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: viz
+            label: Viz
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: viz_render
+            label: Viz Render
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: typewriter
+            label: Typewriter
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+      - type: object
+        name: css
+        label: Css
+        fields:
+          - type: object
+            name: katex
+            label: Katex
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: sequence_diagram
+            label: Sequence Diagram
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+      - type: object
+        name: reveal
+        label: Reveal
+        fields:
+          - type: object
+            name: plugin
+            label: Plugin
+            fields:
+              - type: object
+                name: markdown
+                label: Markdown
+                fields:
+                  - type: string
+                    name: sri
+                    label: Sri
+                  - type: string
+                    name: url
+                    label: Url
+              - type: object
+                name: marked
+                label: Marked
+                fields:
+                  - type: string
+                    name: sri
+                    label: Sri
+                  - type: string
+                    name: url
+                    label: Url
+              - type: object
+                name: zoom
+                label: Zoom
+                fields:
+                  - type: string
+                    name: sri
+                    label: Sri
+                  - type: string
+                    name: url
+                    label: Url
+              - type: object
+                name: pdf
+                label: Pdf
+                fields:
+                  - type: string
+                    name: sri
+                    label: Sri
+                  - type: string
+                    name: url
+                    label: Url
+              - type: object
+                name: notes
+                label: Notes
+                fields:
+                  - type: string
+                    name: sri
+                    label: Sri
+                  - type: string
+                    name: url
+                    label: Url
+              - type: object
+                name: math
+                label: Math
+                fields:
+                  - type: string
+                    name: sri
+                    label: Sri
+                  - type: string
+                    name: url
+                    label: Url
+              - type: object
+                name: highlight
+                label: Highlight
+                fields:
+                  - type: string
+                    name: sri
+                    label: Sri
+                  - type: string
+                    name: url
+                    label: Url
+      - type: object
+        name: d3
+        label: D 3
+        fields:
+          - type: object
+            name: d3
+            label: D 3
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_hierarchy
+            label: D 3 Hierarchy
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_chord
+            label: D 3 Chord
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_scale
+            label: D 3 Scale
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_array
+            label: D 3 Array
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_time
+            label: D 3 Time
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_color
+            label: D 3 Color
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_interpolate
+            label: D 3 Interpolate
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_format
+            label: D 3 Format
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_shape
+            label: D 3 Shape
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_time_format
+            label: D 3 Time Format
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_geo
+            label: D 3 Geo
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_path
+            label: D 3 Path
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_collection
+            label: D 3 Collection
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_timer
+            label: D 3 Timer
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_ease
+            label: D 3 Ease
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_dispatch
+            label: D 3 Dispatch
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_selection
+            label: D 3 Selection
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_transition
+            label: D 3 Transition
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_force
+            label: D 3 Force
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_quadtree
+            label: D 3 Quadtree
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_dsv
+            label: D 3 Dsv
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_drag
+            label: D 3 Drag
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_axis
+            label: D 3 Axis
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_random
+            label: D 3 Random
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_scale_chromatic
+            label: D 3 Scale Chromatic
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_fetch
+            label: D 3 Fetch
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_voronoi
+            label: D 3 Voronoi
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_brush
+            label: D 3 Brush
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_zoom
+            label: D 3 Zoom
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_polygon
+            label: D 3 Polygon
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_contour
+            label: D 3 Contour
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: d3_cloud
+            label: D 3 Cloud
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+  msc:
+    type: data
+    label: Msc
+    file: msc.json
+    fields:
+      - type: string
+        name: theme
+        label: Theme
+  reveal:
+    type: data
+    label: Reveal
+    file: reveal.json
+    fields:
+      - type: string
+        name: width
+        label: Width
+      - type: string
+        name: height
+        label: Height
+      - type: number
+        name: margin
+        label: Margin
+        subtype: int
+      - type: number
+        name: minScale
+        label: Min Scale
+        subtype: int
+      - type: number
+        name: maxScale
+        label: Max Scale
+        subtype: int
+      - type: object
+        name: markdown
+        label: Markdown
+        fields:
+          - type: boolean
+            name: smartypants
+            label: Smartypants
+      - type: boolean
+        name: controls
+        label: Controls
+      - type: boolean
+        name: controlsTutorial
+        label: Controls Tutorial
+      - type: string
+        name: controlsLayout
+        label: Controls Layout
+      - type: string
+        name: controlsBackArrows
+        label: Controls Back Arrows
+      - type: boolean
+        name: progress
+        label: Progress
+      - type: boolean
+        name: slideNumber
+        label: Slide Number
+      - type: boolean
+        name: hash
+        label: Hash
+      - type: boolean
+        name: history
+        label: History
+      - type: boolean
+        name: keyboard
+        label: Keyboard
+      - type: boolean
+        name: overview
+        label: Overview
+      - type: boolean
+        name: center
+        label: Center
+      - type: boolean
+        name: touch
+        label: Touch
+      - type: boolean
+        name: loop
+        label: Loop
+      - type: boolean
+        name: rtl
+        label: Rtl
+      - type: string
+        name: navigationMode
+        label: Navigation Mode
+      - type: boolean
+        name: shuffle
+        label: Shuffle
+      - type: boolean
+        name: fragments
+        label: Fragments
+      - type: boolean
+        name: fragmentInURL
+        label: Fragment In URL
+      - type: boolean
+        name: embedded
+        label: Embedded
+      - type: boolean
+        name: help
+        label: Help
+      - type: boolean
+        name: showNotes
+        label: Show Notes
+      - type: number
+        name: autoSlide
+        label: Auto Slide
+        subtype: int
+      - type: boolean
+        name: autoSlideStoppable
+        label: Auto Slide Stoppable
+      - type: number
+        name: defaultTiming
+        label: Default Timing
+        subtype: int
+      - type: boolean
+        name: mouseWheel
+        label: Mouse Wheel
+      - type: boolean
+        name: hideInactiveCursor
+        label: Hide Inactive Cursor
+      - type: number
+        name: hideCursorTime
+        label: Hide Cursor Time
+        subtype: int
+      - type: boolean
+        name: hideAddressBar
+        label: Hide Address Bar
+      - type: boolean
+        name: previewLinks
+        label: Preview Links
+      - type: string
+        name: transition
+        label: Transition
+      - type: string
+        name: transitionSpeed
+        label: Transition Speed
+      - type: string
+        name: backgroundTransition
+        label: Background Transition
+      - type: number
+        name: viewDistance
+        label: View Distance
+        subtype: int
+      - type: string
+        name: parallaxBackgroundImage
+        label: Parallax Background Image
+      - type: string
+        name: parallaxBackgroundSize
+        label: Parallax Background Size
+      - type: string
+        name: display
+        label: Display
+  skin:
+    type: data
+    label: Skin
+    file: skin.toml
+    fields:
+      - type: string
+        name: theme_light_chroma
+        label: Theme Light Chroma
+      - type: string
+        name: theme_dark_chroma
+        label: Theme Dark Chroma
+      - type: string
+        name: theme_hacker_chroma
+        label: Theme Hacker Chroma
+      - type: string
+        name: theme_solarized_chroma
+        label: Theme Solarized Chroma
+      - type: string
+        name: theme_kimbie_chroma
+        label: Theme Kimbie Chroma
+      - type: string
+        name: theme_light_chroma_background
+        label: Theme Light Chroma Background
+      - type: string
+        name: theme_dark_chroma_background
+        label: Theme Dark Chroma Background
+      - type: string
+        name: theme_hacker_chroma_background
+        label: Theme Hacker Chroma Background
+      - type: string
+        name: theme_solarized_chroma_background
+        label: Theme Solarized Chroma Background
+      - type: string
+        name: theme_kimbie_chroma_background
+        label: Theme Kimbie Chroma Background
+  swiper:
+    type: data
+    label: Swiper
+    file: swiper.json
+    fields:
+      - type: object
+        name: option1
+        label: Option 1
+        fields:
+          - type: boolean
+            name: loop
+            label: Loop
+      - type: object
+        name: option2
+        label: Option 2
+        fields:
+          - type: boolean
+            name: loop
+            label: Loop
